@@ -5,13 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./public/style.css">
+    <script src="https://kit.fontawesome.com/5cab7e81b0.js" crossorigin="anonymous"></script>
     <title>Document</title>
 </head>
 <body>
     <div id="header">
         <div id="container">
         <nav >
-            <img src="./images/20220423_165454998_iOS.jpg" class="logo" alt="logo">
+            <img src="./images/download.jpg" class="logo" alt="logo">
             <ul>
                 <li><a href="#">Home</a></li>
                 <li><a href="#">About</a></li>
@@ -38,13 +39,30 @@
                     <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusantium totam quas cum obcaecati reprehenderit officiis recusandae necessitatibus unde ipsa possimus autem commodi ratione error neque saepe repudiandae ea quod natus, veniam similique animi! Quos, sunt. Labore officiis ducimus provident porro aperiam perspiciatis tempora deserunt? In neque dolore omnis totam vel!</p>
                     <br>
                     <div class="tab-titles">
-                        <p class="tab-links active-link">Skills</p>
-                        <p class="tab-links">Experience</p>
-                        <p class="tab-links">Education</p>
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
                     </div>
-                    <div class="tab-content">
+                    <!-- skills -->
+                    <div class="tab-contents active-tab" id="skills" >
                         <ul>
                             <li><span>Full Stack Developer</span><br>MEAN / MERN STACK Develoepr<br>Web Interface<br>Front End Developer</li>
+                            <li><span>IOS Developer</span><br>User Interface</li>
+                            <li><span>Data Analyst</span><br>Analyzing Databse</li>
+                        </ul>
+                    </div>
+                    <!-- experience -->
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>Experience</span><br>MEAN / MERN STACK Develoepr<br>Web Interface<br>Front End Developer</li>
+                            <li><span>Experience</span><br>User Interface</li>
+                            <li><span>Data Analyst</span><br>Analyzing Databse</li>
+                        </ul>
+                    </div>
+                    <!-- Education -->
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>Education</span><br>MEAN / MERN STACK Develoepr<br>Web Interface<br>Front End Developer</li>
                             <li><span>IOS Developer</span><br>User Interface</li>
                             <li><span>Data Analyst</span><br>Analyzing Databse</li>
                         </ul>
@@ -53,5 +71,83 @@
 
             </div>
     </div>
+    <!-- services -->
+    <div id="services">
+        <div id="container">
+            <h1 class="sub-title">Services</h1>
+            <div class="services-list">
+                <div>
+                    <i class="fa-solid fa-code"></i>
+                    <h2>Front End</h2>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nihil magnam culpa eos deleniti itaque sequi nisi cumque sit eius odio?</p>
+                    <a href="#">Learn more</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-code"></i>
+                    <h2>Database</h2>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nihil magnam culpa eos deleniti itaque sequi nisi cumque sit eius odio?</p>
+                    <a href="#">Learn more</a>
+                </div>
+                <div>
+                    <i class="fa-brands fa-apple"></i>
+                    <h2>Ios</h2>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nihil magnam culpa eos deleniti itaque sequi nisi cumque sit eius odio?</p>
+                    <a href="#">Learn more</a>
+                </div>
+            </div>
+            </div>
+            </div>
+        </div>
+        <!-- portfolio -->
+        <div id = "portfolio">
+            <div class = "container">
+                <h1 class="sub-title">Project</h1>
+                <div class="work-list">
+                    <div class="work" >
+                        <img src="./images/download (1).jpg" alt="pic1" >
+                        <div class="layer">
+                            <h3>Social Media</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa, accusantium.</p>
+                            <a href="#"><i class="fa-sharp fa-solid fa-link"></i></a>
+                        </div>
+                    </div>
+                    <div class="work">
+                        <img src="./images/download (2).jpg" alt="pic2" >
+                        <div class="layer">
+                            <h3>Social Media 2</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa, accusantium.</p>
+                            <a href="#"><i class="fa-sharp fa-solid fa-link"></i></a>
+                        </div>
+                    </div>
+                    <div class="work">
+                        <img src="./images/images.jpg" alt="pic3" >
+                        <div class="layer">
+                            <h3>Social Media 3 </h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa, accusantium.</p>
+                            <a href="#"><i class="fa-sharp fa-solid fa-link"></i></a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    <script>
+
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+        
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
 </body>
+
 </html>
