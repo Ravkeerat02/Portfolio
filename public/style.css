@@ -156,6 +156,18 @@ nav ul li a:hover::after{
 .tab-contents.active-tab{
     display: block;
 }
+ 
+.capstone-project{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 50px;
+}
+
+.capstone-titles{
+    display: flex;
+    margin: 20px 0 40px;
+}
 
 /* services */
 #services{
