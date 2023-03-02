@@ -107,7 +107,8 @@ nav ul li a:hover::after{
 .sub-title{
     font-size :60px;
     font-weight: 600;
-    color: #fff
+    color: #fff;
+    margin-bottom: 20px;
 }
 .tab-titles{
     display: flex;
@@ -120,7 +121,6 @@ nav ul li a:hover::after{
     font-weight: 500;
     cursor: pointer;
     position: relative
-
 }
 
 .tab-links::after{
@@ -310,6 +310,7 @@ nav ul li a:hover::after{
 
  }
 
+
  .social-icons a{
     text-decoration: none;
     font-size: 30px;
@@ -319,9 +320,11 @@ nav ul li a:hover::after{
     transition: 0.5s;
  }
 
- .social-icons a:hover{
-    color: #ff004f;
-    transform: translateY(-5px);
+    .social-icons a:hover{
+        color: #ff004f;
+    }
+ .icon-container{
+   color:#fff;
  }
 
  .btn.btn2{
@@ -455,4 +458,5 @@ nav .fa{
     margin-top: -10px;
     display: block;
 }
+
 
