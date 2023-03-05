@@ -128,7 +128,32 @@
                     </ul>
                 </div>
                 <div class = "tab-contents" id="wireframe">
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Libero commodi magni ipsam ducimus veniam, saepe laboriosam debitis quia suscipit laudantium sint reiciendis iure fugiat odit voluptates eum placeat animi voluptatum?</p>
+                    <div class="slider">
+                        <div class="slide">
+                            <img src="./images/Screenshot 2023-03-05 151242.png" alt="wireframe1">
+                        </div>
+                        <div class="slide">
+                            <img src="./images/Screenshot 2023-03-05 151330.png" alt="wireframe2">
+                        </div>
+                        <div class="slide">
+                            <img src="./images/Screenshot 2023-03-05 151409.png" alt="wireframe3">
+                        </div>
+                        <div class="slide">
+                            <img src="./images/Screenshot 2023-03-05 151438.png" alt="wireframe4">
+                        </div>
+                        <div class="slide">
+                            <img src="./images/Screenshot 2023-03-05 151504.png" alt="wireframe5">
+                        </div>
+                        <div class="slide">
+                            <img src="./images/Screenshot 2023-03-05 151532.png" alt="wireframe6">
+                        </div>
+                        <div class="slide">
+                            <img src="./images/Screenshot 2023-03-05 151600.png" alt="wireframe7">
+                        </div>
+                        <div class="slide">
+                            <img src="./images/Screenshot 2023-03-05 151628.png" alt="wireframe8">
+                        </div>
+                    </div>
                 </div>
                 <div class = "tab-contents" id="status_reports">
                     <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Libero commodi magni ipsam ducimus veniam, saepe laboriosam debitis quia suscipit laudantium sint reiciendis iure fugiat odit voluptates eum placeat animi voluptatum?</p>
@@ -255,10 +280,7 @@
         function closemenu(){
             sidemenu.style.right = "-200%";
         }
-
-
-    </script>
-    <script>
+        // Form controls
         const scriptURL = 'https://script.google.com/macros/s/AKfycbzCBFol9kMvjsQkpKBxtdGZZsYbKBGb9lywaK4l4lPq3DJ_Id--ci_z3jOtl95ZL6zm/exec'
         const form = document.forms['submit-to-google-sheet']
         const message = document.getElementById('message')
@@ -273,6 +295,39 @@
             form.reset()
             .catch(error => console.error('Error!', error.message))
         })
+
+        // Image slideshow
+        $(document).ready(function() {
+  $('.slider').slick({
+    arrows: true,
+    prevArrow: '<button type="button" class="slick-prev"><i class="fas fa-angle-left"></i></button>',
+    nextArrow: '<button type="button" class="slick-next"><i class="fas fa-angle-right"></i></button>',
+    dots: true,
+    infinite: true,
+    speed: 500,
+    fade: true,
+    cssEase: 'linear',
+    adaptiveHeight: true,
+    autoplay: true,
+    autoplaySpeed: 5000,
+    pauseOnHover: true,
+    lazyLoad: 'progressive',
+    responsive: [{
+      breakpoint: 768,
+      settings: {
+        arrows: false
+      }
+    }]
+  });
+
+  $('.slider').on('beforeChange', function(event, slick, currentSlide, nextSlide) {
+    var caption = $('.slick-active').data('caption');
+    $('.slider .caption').text(caption);
+  });
+});
+
+
+
       </script>
 </body>
 </html>
