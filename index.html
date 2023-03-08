@@ -5,6 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./public/style.css">
+    <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="slick/slick.min.js"></script>
     <script src="https://kit.fontawesome.com/5cab7e81b0.js" crossorigin="anonymous"></script>
     <title>Portfolio</title>
 </head>
@@ -16,7 +20,7 @@
             <ul id = "sidemenu">
                 <li><a href="#header">Home</a></li>
                 <li><a href="#about">About</a></li>
-                <li><a href="#capstone-project">Capstone Project</a></li>
+                <li><a href="#Capstone-project">Capstone Project</a></li>
                 <li><a href="#services">Skills</a></li>
                 <li><a href="#portfolio">Portfolio</a></li>
                 <li><a href="#Contact">Contact</a></li>
@@ -132,31 +136,17 @@
                     </ul>
                 </div>
                 <div class = "tab-contents" id="wireframe">
-                    <div class="slider">
-                        <div class="slide">
-                            <img src="./images/Screenshot 2023-03-05 151242.png" alt="wireframe1">
-                        </div>
-                        <div class="slide">
-                            <img src="./images/Screenshot 2023-03-05 151330.png" alt="wireframe2">
-                        </div>
-                        <div class="slide">
-                            <img src="./images/Screenshot 2023-03-05 151409.png" alt="wireframe3">
-                        </div>
-                        <div class="slide">
-                            <img src="./images/Screenshot 2023-03-05 151438.png" alt="wireframe4">
-                        </div>
-                        <div class="slide">
-                            <img src="./images/Screenshot 2023-03-05 151504.png" alt="wireframe5">
-                        </div>
-                        <div class="slide">
-                            <img src="./images/Screenshot 2023-03-05 151532.png" alt="wireframe6">
-                        </div>
-                        <div class="slide">
-                            <img src="./images/Screenshot 2023-03-05 151600.png" alt="wireframe7">
-                        </div>
-                        <div class="slide">
-                            <img src="./images/Screenshot 2023-03-05 151628.png" alt="wireframe8">
-                        </div>
+                    <div class="slideshow-container">
+                        <div><img src="images/Screenshot 2023-03-05 151242.png" alt="img1"></div>
+                        <div><img src="images/Screenshot 2023-03-05 151330.png" alt="img2"></div>
+                        <div><img src="images/Screenshot 2023-03-05 151409.png" alt="img3"></div>
+                        <div><img src="images/Screenshot 2023-03-05 151653.png" alt="img4"></div>
+                        <div><img src="images/Screenshot 2023-03-05 151728.png" alt="img5"></div>
+                        <div><img src="images/Screenshot 2023-03-05 151803.png" alt="img6"></div>
+                        <div><img src="images/Screenshot 2023-03-05 151836.png" alt="img7"></div>
+                        <div><img src="images/Screenshot 2023-03-05 151915.png" alt="img8"></div>
+                        <a class="prev">&#10094;</a>
+                        <a class="next">&#10095;</a>
                     </div>
                 </div>
                 <div class = "tab-contents" id="status_reports">
@@ -302,36 +292,51 @@
 
         // Image slideshow
         $(document).ready(function() {
-  $('.slider').slick({
-    arrows: true,
-    prevArrow: '<button type="button" class="slick-prev"><i class="fas fa-angle-left"></i></button>',
-    nextArrow: '<button type="button" class="slick-next"><i class="fas fa-angle-right"></i></button>',
-    dots: true,
-    infinite: true,
-    speed: 500,
-    fade: true,
-    cssEase: 'linear',
-    adaptiveHeight: true,
-    autoplay: true,
-    autoplaySpeed: 5000,
-    pauseOnHover: true,
-    lazyLoad: 'progressive',
-    responsive: [{
-      breakpoint: 768,
-      settings: {
-        arrows: false
-      }
-    }]
-  });
+        var slideIndex = 1;
+        showSlides(slideIndex);
 
-  $('.slider').on('beforeChange', function(event, slick, currentSlide, nextSlide) {
-    var caption = $('.slick-active').data('caption');
-    $('.slider .caption').text(caption);
-  });
-});
+        $(".prev").click(function() {
+        slideIndex -= 1;
+        showSlides(slideIndex);
+        });
 
+        $(".next").click(function() {
+        slideIndex += 1;
+        showSlides(slideIndex);
+        });
 
+        function showSlides(n) {
+            var i;
+            var slides = $(".slideshow-container img");
+            var prevBtn = $(".prev");
+            var nextBtn = $(".next");
 
+            if (n > slides.length) {
+                slideIndex = 1;
+            }
+            if (n < 1) {
+                slideIndex = slides.length;
+            }
+
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+
+            slides[slideIndex - 1].style.display = "block";
+
+            if (slideIndex == 1) {
+                prevBtn.css("display", "none");
+            } else {
+                prevBtn.css("display", "block");
+            }
+
+            if (slideIndex == slides.length) {
+                nextBtn.css("display", "none");
+            } else {
+                nextBtn.css("display", "block");
+            }
+            }
+        });
       </script>
 </body>
 </html>

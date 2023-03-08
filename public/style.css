@@ -171,58 +171,35 @@ nav ul li a:hover::after{
 }
 
 /* Image slideshow */
-.slider {
-    position: relative;
-  }
-  
-  .slide {
-    position: relative;
-    display: none;
-  }
-  
-  .slide.active {
-    display: block;
-  }
-  
-  .slide img {
+.slideshow-container {
     max-width: 100%;
+    position: relative;
+    margin: auto;
   }
   
-  .slick-prev,
-  .slick-next {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 50px;
-    height: 50px;
-    background-color: #fff;
-    border: none;
-    border-radius: 50%;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-    font-size: 0;
-    transition: all 0.3s ease-in-out;
-    z-index: 10;
-  }
-  
-  .slick-prev:hover,
-  .slick-next:hover {
-    background-color: #333;
-    color: #fff;
-  }
-  
-  .slick-prev {
-    left: 20px;
-  }
-  
-  .slick-next {
-    right: 20px;
-  }
-  
-  .slick-disabled {
-    opacity: 0.5;
-    cursor: not-allowed;
+  .slideshow-container img {
+    display: none;
+    width: 100%;
+    height: auto;
   }
 
+  .prev, .next {
+    position: absolute;
+    top: 50%;
+    margin-top: -22px;
+    font-size: 40px;
+    font-weight: bold;
+    padding: 16px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    z-index: 1;
+  }
+
+  .next {
+    right: 0;
+  }
+  
 
 /* services */
 #services{
