@@ -78,6 +78,11 @@ nav ul li a:hover::after{
 }
 
 /* ----------about ---------------- */
+
+.about-me{
+    background: #333;
+    color:#ff004f
+}
 #about{
     /* top-bottm followed by right and left */
     padding:80px 0; 
