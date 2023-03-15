@@ -83,6 +83,3 @@ var tablinks = document.getElementsByClassName("tab-links");
             }
             }
         });
-      </script>
-</body>
-</html>
