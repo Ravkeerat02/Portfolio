@@ -12,10 +12,13 @@
     <script src="https://kit.fontawesome.com/5cab7e81b0.js" crossorigin="anonymous"></script>
     <title>Portfolio</title>
 </head>
+<style>
+ 
+</style>
 <body>
     <div id="header">
         <div id="container">
-        <nav >
+        <nav>
             <img src="images/download.jpg" class="logo" alt="logo">
             <ul id = "sidemenu">
                 <li><a href="#header">Home</a></li>
@@ -24,10 +27,8 @@
                 <li><a href="#services">Skills</a></li>
                 <li><a href="#portfolio">Project</a></li>
                 <li><a href="#Contact">Contact</a></li>
-                <i class="fa-sharp fa-solid fa-circle-xmark" onclick="closemenu()"></i>
             </ul>
-            <i class="fa-solid fa-caret-down" onclick="openmenu()"></i>
-        </nav>
+       </nav>
 
         <div class="header-text">
             <p>Computer Programming and Analysis Student</p>
@@ -40,7 +41,7 @@
         <div id="container">
             <div class="row">
                 <div class="about-col-1">
-                    <img src="images/_DSC4  357.jpg" alt="Picture 1">
+                    <img src="images/photo-1612383401597-cdfb8bdfa0d9.jpeg" alt="Picture 1">
                 </div>
                 <div class="about-col-2">
                     <h1 class="sub-title">About Me</h1>        
@@ -49,19 +50,9 @@
                         <p>I'm eager to learn more and gain experience in the field, so I'm looking for opportunities to work with experienced developers and learn from them. I'm willing to work hard and take on any challenge to develop my skills further. I believe that my creativity, attention to detail, and passion for technology make me a strong candidate for a front-end developer role. I'm excited about the prospect of using my skills to create visually stunning and user-friendly websites and applications.</p>
                     <br>
                     <div class="tab-titles">
-                        <p class="tab-links active-link" onclick="opentab('experience')">Experience</p>
-                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                        <p class="tab-links active-link" onclick="opentab('education')">Education</p>
                         <p class="tab-links" onclick="opentab('certification')">Certification</p>
                     </div>
-                    <!-- Experience -->
-                    <!-- <div class="tab-contents" id="experience">
-                        <ul>
-                            <li><span>Experience</span><br>MEAN / MERN STACK Develoepr<br>Web Interface<br>Front End Developer</li>
-                            <li><span>Experience</span><br>User Interface</li>
-                            <li><span>Data Analyst</span><br>Analyzing Databse</li>
-                        </ul>
-                    </div> -->
-                    <!-- Education -->
                     <div class="tab-contents" id="education">
                         <ul>
                             <li><span>George Brown College</span><br>Toronto, Ontario<br><b>Advance Diploma - </b>Computer Programming & Analysis<br>April 2023</li>
@@ -105,16 +96,16 @@
                     </ul>
                 </div>
                 <div class = "tab-contents" id="project_vision">
-                    <p><span>"Our system aims to simplify employee scheduling and record-keeping with a user-friendly platform that values transparency, accountability, and innovation."</span></p>
+                    <p class="vision_description">"Our system aims to simplify employee scheduling and record-keeping with a user-friendly platform that values transparency, accountability, and innovation."</p>
                 </div>
                 <div class = "tab-contents" id="project_requirements">
-                    <p>The system requirements involve an <span>application server for storing records and data</span>, with <span>two external entities: Manager, Employee</span> . The features for the application include <span>viewing schedules, records, controlling access, manipulating the system, and supervising records and employees.</span></p>
+                    <p>The system requirements involve an <span class="description">application server for storing records and data</span>, with <span class="description">two external entities: Manager, Employee</span> . The features for the application include <span class="description">viewing schedules, records, controlling access, manipulating the system, and supervising records and employees.</span></p>
                     <br>
-                    <p>The high-level requirements include enabling employees to <span>view their schedules, request time-offs, and punch-in and punch-out</span>. <span>Managers</span> should be able to <span>create and update schedules, approve or deny time-offs, and access previous schedules and records</span> . Additional requirements <b>include notifications for updated schedules, time-off status, and generating reports.</b></p>
+                    <p>The high-level requirements include enabling employees to <span class="description">view their schedules, request time-offs, and punch-in and punch-out</span>. <span class="description">Managers</span> should be able to <span class="description">create and update schedules, approve or deny time-offs, and access previous schedules and records</span> . Additional requirements <b>include notifications for updated schedules, time-off status, and generating reports.</b></p>
                 </div>
                 <div class = "tab-contents" id="project_plan">
                     <ul>
-                        <li>The project involves developing a time management and scheduling application to help small businesses manage employee schedules, time-off requests, and track real-time updates.</li>
+                        <li>The project involves developing a time management and scheduling application to help <span class="description">small businesses manage employee schedules, time-off requests, and track real-time updates.</span>   </li>
                         <li>The project has a planned <span>start date of 01-02-23 and a planned end date of 31-03-23</span>.</li>
                         <li>The project scope includes <span>features such as a login and signup page, home page, schedule page, request page, and timecard page</span>. It also includes assumptions about employee training, support from the owner/developers, and a user-friendly interface.</li>
                         <li>The project team has identified <span>potential risks</span> such as <span>involvement, poor functionality, technical issues, data breaches</span>, and has developed management strategies to address them. The team also plans to <span>communicate regularly, track progress through meetings and reporting, and use a Gantt chart and WBS to organize tasks and deadlines.</span></li>
@@ -156,10 +147,10 @@
                     </div>
                 </div>
                 <div class = "tab-contents" id="status_reports">
-                    <p>The major goal of this sprint was to begin constructing the backend of the Time Master application with Node.js and MongoDB. This was accomplished and we are now testing and optimizing the backend. In this sprint we also had the goal of deciding on an overall layout and template of the application. That goal was completed and we are ready to move on to the objectives planned for the next sprint. </p>
+                    <p>The major goal of this sprint was to begin constructing the backend of the <span class="about-me">Time Master application with Node.js and MongoDB</span>. This was accomplished and we are now testing and optimizing the backend. In this sprint we also had the goal of deciding on an overall layout and template of the application. That goal was completed and we are ready to move on to the objectives planned for the next sprint. </p>
                 </div>
                 <div class = "tab-contents" id="system_implementation">
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Libero commodi magni ipsam ducimus veniam, saepe laboriosam debitis quia suscipit laudantium sint reiciendis iure fugiat odit voluptates eum placeat animi voluptatum?</p>
+                    <iframe width="1500" height= "315" src="images/video1893177524.mp4" frameborder="0" allowfullscreen></iframe>
                 </div>
                 </div>
 
@@ -216,15 +207,15 @@
                         <div class="layer">
                             <h3><b>Weather Application</b></h3>
                             <p>A weather application built using the MERN stack would provide users with current and forecasted weather information for their selected location, using Node.js and Express.js for server-side logic and React for the client-side user interface.</p>
-                            <a href="https://github.com/Ravkeerat02/101344680_comp3123_labtest2"><i class="fa-sharp fa-solid fa-link"></i></a>
+                            <button class="btn" onclick="window.location.href='https://github.com/Ravkeerat02/101344680_comp3123_labtest2'" type="button">View Project</button>
                         </div>
                     </div>
                     <div class="work">
                         <img src="images/pic2.png" alt="pic2" >
                         <div class="layer">
                             <h3><b>Restraunt Guide</b></h3>
-                            <p>A mobile app that enables users to navigate to their destination, add/edit restaurant information, and find nearby eateries through a map view. Users can discover new dining options and customize their search by filtering results based on cuisine, price range, or ratings.</p>
-                            <a href="https://github.com/Ravkeerat02/Mobile_Term_Project--9/tree/RK"><i class="fa-sharp fa-solid fa-link"></i></a>
+                            <p>A mobile app that enables users to navigate to their destination, add/edit restaurant information, and find nearby eateries through a map view. Users can discover new dining options and customize their search by filtering results based on cuisine, price range, or ratings.</p> 
+                            <button class="btn" onclick="window.location.href='https://github.com/Ravkeerat02/Mobile_Term_Project--9/tree/main'" type="button">View Project</button>
                         </div>
                     </div>
                     <div class="work">
@@ -232,7 +223,10 @@
                         <div class="layer">
                             <h3>Tic Tac Toe</h3>
                             <p>Tic Tac Toe is a classic game played by two players to achieve a row, column or diagonal of their symbols on a 3x3 grid. Using HTML, CSS and JavaScript, a Tic Tac Toe game can be created where players click on squares to place their symbol and the game checks for a win or tie.</p>
-                            <a href="https://github.com/Ravkeerat02/TIC-TAC-TOE"><i class="fa-sharp fa-solid fa-link"></i></a>
+                            <div class="project-buttons">
+                                <button class="btn" onclick="window.open('https://github.com/Ravkeerat02/TIC-TAC-TOE', '_blank')" type="button">View Project</button>
+                                <button class="btn" onclick="window.open('https://tic-tac-toe-ravkeerat02.vercel.app/', '_blank')" type="button">Working Version</button>                              </div>
+                              
                         </div>
                     </div>
                     <div class="work">
@@ -240,7 +234,10 @@
                         <div class="layer">
                             <h3>Quote Generator</h3>
                             <p>A quote generator displays a new quote upon page refresh or button press, providing a simple way to inspire and motivate users with fresh words of wisdom each time.</p>
-                            <a href="https://github.com/Ravkeerat02/Quote-generator"><i class="fa-sharp fa-solid fa-link"></i></a>
+                            <div class="project-buttons">
+                                <button class="btn" onclick="window.open('https://github.com/Ravkeerat02/Quote-generator', '_blank')" type="button">View Project</button>
+                                <button class="btn" onclick="window.location.href='https://quote-generator-ravkeerat02.vercel.app/'" type="button">Working Version</button>
+                              </div>                              
                         </div>
                     </div>
                 </div>
@@ -259,6 +256,7 @@
                         <div class ="social-icons">
                             <a href="https://www.linkedin.com/in/ravkeerat-singh-47a472147/"><i class="fa-brands fa-linkedin"></i></a>
                             <a href="https://github.com/Ravkeerat02"><i class="fa-brands fa-github"></i></a>
+                            <a href="https://www.behance.net/ravkeeratsingh"><i class="fa-brands fa-behance"></i></a>
                         </div>
                         <a href="public/Minimalist White and Grey Professional Resume.pdf" download class="btn btn2 ">Download CV</a>
                     </div>
