@@ -18,19 +18,21 @@
 <body>
     <div id="header">
         <div id="container">
-        <nav>
-            <img src="images/download.jpg" class="logo" alt="logo">
-            <ul id = "sidemenu">
-                <li><a href="#header">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#Capstone-project">Capstone Project</a></li>
-                <li><a href="#services">Skills</a></li>
-                <li><a href="#portfolio">Project</a></li>
-                <li><a href="#Contact">Contact</a></li>
-            </ul>
-       </nav>
+            <nav>
+              <img src="images/download.jpg" class="logo" alt="logo">
+              <div class="menu fade-in">
+                <ul>
+                  <li><a href="#about">About</a></li>
+                  <li><a href="#services">Skills</a></li>
+                  <li><a href="#portfolio">Project</a></li>
+                  <li><a href="#Contact">Contact</a></li>
+                </ul>
+              </div>
+            </nav>
+          </div>
+          
 
-        <div class="header-text">
+        <div class="header-text fade-in">
             <p>Computer Programming and Analysis Student</p>
             <br>
             <h1>Hi , I'm <span>Ravkeerat Singh</span> <br>from India</h1>
@@ -69,96 +71,7 @@
                 </div>
 
             </div>
-    </div>
-    <div id="Capstone-project">
-        <div id="container">
-                <h1 class="sub-title">Capstone Project</h1>
-                <div class="about-col-2">
-                <!-- Project Summary , Project Vision , Project Requiremenets , Project Plan , Requirements , wireframe , status reports , system implementation -->
-                <div class = "capstone-titles">
-                    <p class="tab-links active-link" onclick="opentab('project_summary')">Project Summary</p>
-                    <p class="tab-links" onclick="opentab('project_vision')">Project Vision</p>
-                    <p class="tab-links" onclick="opentab('project_requirements')">Project Requirements</p>
-                    <p class="tab-links" onclick="opentab('project_plan')">Project Plan</p>
-                    <p class="tab-links" onclick="opentab('requirements')">Requirements</p>
-                    <p class="tab-links" onclick="opentab('wireframe')">Wireframe</p>
-                    <p class="tab-links" onclick="opentab('status_reports')">Status Reports</p>
-                    <p class="tab-links" onclick="opentab('system_implementation')">System Implementation</p>
-                </div>
-                <div class = "tab-contents" id="project_summary">
-                    <ul>
-                        <li><span><b>Time Master application</span></b> specializes in <b>providing time management and employee scheduling solutions for small businesses.</b></li>
-                        <li>The project aims to develop a platform that streamlines employee scheduling and time-off requests to help small businesses save time, reduce stress, and improve productivity.</li>
-                        <li>The platform will allow employees to clock in/out, view schedules, and submit availability requests, while managers can schedule employees and receive real-time updates and notifications.</li>
-                        <li><span>Key deliverables<span><br><li>Includes an intuitive interface, automated scheduling tools, reporting and analytics features, integration with popular tools, and comprehensive documentation/training materials.<li>
-                        <li>The project addresses the business need for <span>small business owners to manage their time and resources effectively, ultimately leading to improved success and growth.</span></li><br>
-                        <li><a href="./public/Project-Summary-Time-Master.pdf" download><i class="fas fa-download"></i> Project Summary</a></li>
-                    </ul>
-                </div>
-                <div class = "tab-contents" id="project_vision">
-                    <p class="vision_description">"Our system aims to simplify employee scheduling and record-keeping with a user-friendly platform that values transparency, accountability, and innovation."</p>
-                </div>
-                <div class = "tab-contents" id="project_requirements">
-                    <p>The system requirements involve an <span class="description">application server for storing records and data</span>, with <span class="description">two external entities: Manager, Employee</span> . The features for the application include <span class="description">viewing schedules, records, controlling access, manipulating the system, and supervising records and employees.</span></p>
-                    <br>
-                    <p>The high-level requirements include enabling employees to <span class="description">view their schedules, request time-offs, and punch-in and punch-out</span>. <span class="description">Managers</span> should be able to <span class="description">create and update schedules, approve or deny time-offs, and access previous schedules and records</span> . Additional requirements <b>include notifications for updated schedules, time-off status, and generating reports.</b></p>
-                </div>
-                <div class = "tab-contents" id="project_plan">
-                    <ul>
-                        <li>The project involves developing a time management and scheduling application to help <span class="description">small businesses manage employee schedules, time-off requests, and track real-time updates.</span>   </li>
-                        <li>The project has a planned <span>start date of 01-02-23 and a planned end date of 31-03-23</span>.</li>
-                        <li>The project scope includes <span>features such as a login and signup page, home page, schedule page, request page, and timecard page</span>. It also includes assumptions about employee training, support from the owner/developers, and a user-friendly interface.</li>
-                        <li>The project team has identified <span>potential risks</span> such as <span>involvement, poor functionality, technical issues, data breaches</span>, and has developed management strategies to address them. The team also plans to <span>communicate regularly, track progress through meetings and reporting, and use a Gantt chart and WBS to organize tasks and deadlines.</span></li>
-                        <li><a href="./public/COMP3059-F22-Project Plan-1.5.pdf" download ><i class="fas fa-download"></i>Project Plan</a></li>
-                    </ul>
-                </div>
-                <div class = "tab-contents" id="requirements">
-                    <ul>
-                        <li><span>Employee</span></li><br>
-                            Employee should be able to see their schedules and hours worked.<br>
-                            Employee should be able to request time-offs.<br>
-                            Employee should be able to see a breakdown of the money made during the scheduled time.<br>
-                            Employee should be able to punch-in and punch-out.<br>   
-                        </li> 
-                        <li><span>Manager</span></li><br>
-                            Manager should be able to create and update employee schedules.<br>
-                            Manager should be able to approve or deny requested time-offs.<br>
-                            Manager should be able to access each employees’ previous schedules and money made.<br>
-                        </li>
-                        <li><span>Admin</span></li><br>
-                            Admin should be able to create, edit, or delete manager profiles.<br>
-                            Admin should be able to edit the system and tend to its needs.<br>
-                        </li>                    
-                        <li><a href="./public/COMP3059-F22-Requirements-1.5.pdf" download ><i class="fas fa-download"></i>Requirements</a></li>
-                    </ul>
-                </div>
-                <div class = "tab-contents" id="wireframe">
-                    <div class="slideshow-container">
-                        <div><img src="images/Screenshot 2023-03-05 151242.png" alt="img1"></div>
-                        <div><img src="images/Screenshot 2023-03-05 151330.png" alt="img2"></div>
-                        <div><img src="images/Screenshot 2023-03-05 151409.png" alt="img3"></div>
-                        <div><img src="images/Screenshot 2023-03-05 151653.png" alt="img4"></div>
-                        <div><img src="images/Screenshot 2023-03-05 151728.png" alt="img5"></div>
-                        <div><img src="images/Screenshot 2023-03-05 151803.png" alt="img6"></div>
-                        <div><img src="images/Screenshot 2023-03-05 151836.png" alt="img7"></div>
-                        <div><img src="images/Screenshot 2023-03-05 151915.png" alt="img8"></div>
-                        <a class="prev">&#10094;</a>
-                        <a class="next">&#10095;</a>
-                    </div>
-                </div>
-                <div class = "tab-contents" id="status_reports">
-                    <p>The major goal of this sprint was to begin constructing the backend of the <span class="about-me">Time Master application with Node.js and MongoDB</span>. This was accomplished and we are now testing and optimizing the backend. In this sprint we also had the goal of deciding on an overall layout and template of the application. That goal was completed and we are ready to move on to the objectives planned for the next sprint. </p>
-                </div>
-                <div class = "tab-contents" id="system_implementation">
-                    <iframe width="1500" height= "315" src="images/video1893177524.mp4" frameborder="0" allowfullscreen></iframe>
-                </div>
-                </div>
-
-            </div>
-            </div>
-            </div>  
-        </div> 
-    </div>
+    </div>    
     <!-- services -->
     <div id="services">
         <div id="container">
@@ -275,7 +188,7 @@
                 <p>Copyright &copy; Ravkeerat Singh </p>
             </div>
         </div>
-    <script>
+    <script>    
 
         var tablinks = document.getElementsByClassName("tab-links");
         var tabcontents = document.getElementsByClassName("tab-contents");
@@ -362,6 +275,21 @@
             }
             }
         });
+
+        // add the "active" class to the header-text div after the page loads
+            window.onload = function() {
+            document.querySelector('.header-text').classList.add('active');
+            document.querySelector('.menu').classList.add('active');
+        }
+
+      
+
+
+
+    
+
+
+
       </script>
 </body>
 </html>
