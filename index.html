@@ -19,7 +19,7 @@
     <div id="header">
         <div id="container">
             <nav>
-              <img src="images/download.jpg" class="logo" alt="logo">
+              <!-- <img src="images/download.jpg" class="logo" alt="logo"> needs replacment -->
               <div class="menu fade-in">
                 <ul>
                   <li><a href="#about">About</a></li>
@@ -229,67 +229,12 @@
             .catch(error => console.error('Error!', error.message))
         })
 
-        // Image slideshow
-        $(document).ready(function() {
-        var slideIndex = 1;
-        showSlides(slideIndex);
-
-        $(".prev").click(function() {
-        slideIndex -= 1;
-        showSlides(slideIndex);
-        });
-
-        $(".next").click(function() {
-        slideIndex += 1;
-        showSlides(slideIndex);
-        });
-
-        function showSlides(n) {
-            var i;
-            var slides = $(".slideshow-container img");
-            var prevBtn = $(".prev");
-            var nextBtn = $(".next");
-
-            if (n > slides.length) {
-                slideIndex = 1;
-            }
-            if (n < 1) {
-                slideIndex = slides.length;
-            }
-
-            for (i = 0; i < slides.length; i++) {
-                slides[i].style.display = "none";
-            }
-
-            slides[slideIndex - 1].style.display = "block";
-
-            if (slideIndex == 1) {
-                prevBtn.css("display", "none");
-            } else {
-                prevBtn.css("display", "block");
-            }
-
-            if (slideIndex == slides.length) {
-                nextBtn.css("display", "none");
-            } else {
-                nextBtn.css("display", "block");
-            }
-            }
-        });
-
+        
         // add the "active" class to the header-text div after the page loads
             window.onload = function() {
             document.querySelector('.header-text').classList.add('active');
             document.querySelector('.menu').classList.add('active');
         }
-
-      
-
-
-
-    
-
-
 
       </script>
 </body>
